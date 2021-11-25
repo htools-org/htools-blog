@@ -1,4 +1,30 @@
-baseURL: http://example.org/
+baseURL: https://blog.htools.work/
 languageCode: en-us
-title: My New Hugo Site
-theme: "PaperMod"
+title: Handshake Tools Blog
+theme: PaperMod
+
+params:
+  description: 'Guides, Articles, Posts on Handshake.'
+  keywords: [Handshake, HTools]
+  author: [Rithvik Vibhu]
+  ShowShareButtons: true
+  ShowBreadCrumbs: true
+  showtoc: true
+
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: "This blog is for everything Handshake from guides to
+    articles. Check out https://htools.work for handshake-related tools."
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/htools-org"
+    - name: twitter
+      url: "https://twitter.com/rithvikvibhut"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
