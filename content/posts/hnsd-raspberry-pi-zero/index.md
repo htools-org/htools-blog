@@ -139,7 +139,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/pi/hnsd/hnsd -p 4 -r 0.0.0.0:53 -d -l /var/log/hnsd.log
+ExecStart=/home/pi/hnsd/hnsd -p 4 -r 0.0.0.0:53
 Restart=always
 
 [Install]
@@ -151,8 +151,6 @@ sudo systemctl enable hnsd.service
 # Start!
 sudo service hnsd start
 ```
-
-Note: the service is configured to send logs to `/var/log/hnsd.log`
 
 ## Using Your Server
 
