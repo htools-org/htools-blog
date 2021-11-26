@@ -16,7 +16,8 @@ draft: false
 # Set up Web Server
 
 In this part, we'll set up a simple nginx server that just serves a static
-website.
+website. You can also go with any other software like [Apache
+httpd](https://httpd.apache.org/) or [lighttpd](https://www.lighttpd.net/).
 
 ## Install nginx
 
