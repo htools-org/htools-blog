@@ -34,12 +34,12 @@ hash to zone on the DNS server.
 
 Buffrr has a nice
 [one-liner](https://gist.github.com/buffrr/609285c952e9cb28f76da168ef8c2ca6)
-that does this with RSA keys. This is a modified version for ECDSA:
+that does generates a self-signed certificate:
 
 > Remember to replace `smartface` with your domain name in 3 places!
 
 ```sh
-openssl req -x509 -newkey ec:<(openssl ecparam -name secp521r1) -days 365 -nodes \
+openssl req -x509 -newkey rsa:4096 -sha256 -days 365 -nodes \
   -keyout cert.key -out cert.crt -extensions ext  -config \
   <(echo "[req]";
     echo distinguished_name=req;
