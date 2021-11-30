@@ -8,7 +8,7 @@ cover:
   relative: false
 ---
 
-Handshake has a tiny SPV resolver that can run in devices with low specs, such a
+Handshake has a tiny SPV resolver that can run on devices with low specs, such a
 [Raspberry Pi Zero W](https://www.raspberrypi.com/products/raspberry-pi-zero/).
 
 In this tutorial we will need just the RPi and a SD Card (min 4GB). We also need
@@ -35,8 +35,9 @@ password that RPi will use. 🤯
 Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> (or <kbd>Cmd</kbd> +
 <kbd>Shift</kbd> + <kbd>X</kbd>)
 
-Note: this next step maybe only available if you are running the imager on a Mac
-OS. No worries, we can setup wifi manually.
+> Note: this next step is maybe available only if you are running the imager on
+> a Mac OS. If you don't see this step, no worries, we can setup wifi manually
+> later.
 
 ![Imager](images/imager3.png)
 
@@ -60,11 +61,11 @@ These are the fields I changed:
 
 Save. Click on "Write" and confirm. It may take a while.
 
-Once it's finished, insert the SD Card in the RPi and plug the power cable.
+Once it's finished, insert the SD Card in the RPi and plug in the power cable.
 
-There's no need for screen or keyboard directly in RPi. We can access it
-remotely. Keep in mind that the first time you power the device it will expand
-the OS inside the SD Card, which may take a while.
+There's no need for a screen or keyboard for the RPi. We can access it remotely.
+Keep in mind that the first time you power the device it will expand the OS
+inside the SD Card, which may take a while.
 
 After ~5 min, try to connect via ssh:
 
@@ -83,6 +84,7 @@ sudo apt install -y git automake libtool libunbound-dev
 git clone https://github.com/handshake-org/hnsd.git
 cd hnsd/
 ./autogen.sh && ./configure && make
+sudo setcap 'cap_net_bind_service=+ep' ./hnsd
 ```
 
 ## Disable default services
@@ -94,7 +96,6 @@ them and put our own DNS resolver there:
 sudo sed -i '/name_servers/s/^#//g' /etc/resolvconf.conf
 sudo sed -i 's/\(option domain_name_servers\).*/\1/g' /etc/dhcpcd.conf
 echo 'nameserver 127.0.0.1' | sudo tee /etc/resolv.conf > /dev/null
-sudo setcap 'cap_net_bind_service=+ep' /home/pi/hnsd/hnsd
 ```
 
 ## Quick test
@@ -125,8 +126,8 @@ chain (44716):   new height: 44716
 chain (44717):   new height: 44717
 ```
 
-You can check in a [block explorer](https://hnsnetwork.com/) what's the latest
-block.
+You can check a [block explorer](https://hnsnetwork.com/) for the latest block
+number.
 
 In another terminal window in your computer (not via SSH) try this:
 
@@ -179,7 +180,7 @@ We have two options here:
 
 Both will work but I can't help you on this configuration because it depends on
 the devices, OS or router brand/model. To configure the DNS you will need the
-Raspberry Pi's IP
+Raspberry Pi's IP:
 
 ```sh
 hostname -I
@@ -187,12 +188,13 @@ hostname -I
 
 ## What now?
 
-Assuming you have already updated the DNS settings of your computer or router
+Assuming you have already updated the DNS settings of your computer or router,
 you are ready to access domains on Handshake.
 
 Try these:
 
-- http://parking.sinpapeles/ - A list of domains available for sale
-- http://iamfernando/ - My personal domain
-- http://allhns/ - A lot of useful links about Handshake
-- http://hnssearch/ - a search engine for Handshake
+- [http://parking.sinpapeles/](http://parking.sinpapeles/) - A list of domains
+  available for sale
+- [http://iamfernando/](http://iamfernando/) - My personal domain
+- [http://allhns/](http://allhns/) - A lot of useful links about Handshake
+- [http://hnssearch/](http://hnssearch/) - a search engine for Handshake
