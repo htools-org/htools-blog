@@ -55,6 +55,22 @@
 <h1>Posts</h1>
 </header>
 <article class=post-entry>
+<figure class=entry-cover>
+<img loading=lazy srcset="https://blog.htools.work/posts/hnsd-raspberry-pi-zero/images/pi_hu7b84bc14b2b38284af7e28b6dc9b49cd_29434_360x0_resize_q75_box.jpeg 360w ,https://blog.htools.work/posts/hnsd-raspberry-pi-zero/images/pi_hu7b84bc14b2b38284af7e28b6dc9b49cd_29434_480x0_resize_q75_box.jpeg 480w ,https://blog.htools.work/posts/hnsd-raspberry-pi-zero/images/pi.jpeg 500w" sizes="(min-width: 768px) 720px, 100vw" src=https://blog.htools.work/posts/hnsd-raspberry-pi-zero/images/pi.jpeg alt="Raspberry Pi Zero W" width=500 height=400>
+</figure>
+<header class=entry-header>
+<h2>Your own Handshake resolver on Raspberry Pi
+</h2>
+</header>
+<section class=entry-content>
+<p>Handshake has a tiny SPV resolver that can run on devices with low specs, such a Raspberry Pi Zero W.
+In this tutorial we will need just the RPi and a SD Card (min 4GB). We also need a SD Card reader (USB or native).
+Raspberry Pi OS First step is to install the OS in the SD card. Raspberry Pi has a utility called Raspberry Pi Imager that does all the work for us....</p>
+</section>
+<footer class=entry-footer><span title="2021-11-26 17:54:17 +0100 +0100">November 26, 2021</span>&nbsp;·&nbsp;Falci</footer>
+<a class=entry-link aria-label="post link to Your own Handshake resolver on Raspberry Pi" href=https://blog.htools.work/posts/hnsd-raspberry-pi-zero/></a>
+</article>
+<article class=post-entry>
 <header class=entry-header>
 <h2>HNS + PowerDNS + Nginx + DANE - Introduction
 </h2>
@@ -70,16 +86,16 @@ A domain name - hope you have one ready A DNS server - this is what tells browse
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>HNS + PowerDNS + Nginx + DANE - Part 3
+<h2>HNS + PowerDNS + Nginx + DANE - Part 1
 </h2>
 </header>
 <section class=entry-content>
 <p>Posts in this series:
-Introduction Part 1 - Set up DNS server Part 2 - Set up Web server Part 3 - Secure with DANE (this one!) Secure with DANE If you’re following with the series, we have a website reachable with a Handshake domain, but it’s only over HTTP and not secure.
-With regular domains, one would request a Certificate Authority (CA) to sign our certificate and then use it on the web server....</p>
+Introduction Part 1 - Set up DNS server (this one!) Part 2 - Set up Web server Part 3 - Secure with DANE Set up DNS server We’ll be using PowerDNS here. You can use bind9, knot, or any other authoritative server, but PowerDNS is the (personally) easiest to set up and use.
+Sebastian Rasor has a similar guide with nsd: https://www.sebastianrasor.com/blog/hosting-a-secure-website-on-the-handshake-protocol-using-dane...</p>
 </section>
-<footer class=entry-footer><span title="2021-11-26 00:00:15 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
-<a class=entry-link aria-label="post link to HNS + PowerDNS + Nginx + DANE - Part 3" href=https://blog.htools.work/posts/hns-pdns-nginx-part-3/></a>
+<footer class=entry-footer><span title="2021-11-26 00:00:00 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
+<a class=entry-link aria-label="post link to HNS + PowerDNS + Nginx + DANE - Part 1" href=https://blog.htools.work/posts/hns-pdns-nginx-part-1/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
@@ -91,21 +107,21 @@ With regular domains, one would request a Certificate Authority (CA) to sign our
 Introduction Part 1 - Set up DNS server Part 2 - Set up Web server (this one!) Part 3 - Secure with DANE Set up Web Server In this part, we’ll set up a simple nginx server that just serves a static website. You can also go with any other software like Apache httpd or lighttpd.
 Install nginx # Install nginx sudo apt install nginx -y # create a directory to place website sudo mkdir -p /var/www/smartface Add content Copy your website files into /var/www/smartface....</p>
 </section>
-<footer class=entry-footer><span title="2021-11-26 00:00:10 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
+<footer class=entry-footer><span title="2021-11-26 00:00:00 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
 <a class=entry-link aria-label="post link to HNS + PowerDNS + Nginx + DANE - Part 2" href=https://blog.htools.work/posts/hns-pdns-nginx-part-2/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>HNS + PowerDNS + Nginx + DANE - Part 1
+<h2>HNS + PowerDNS + Nginx + DANE - Part 3
 </h2>
 </header>
 <section class=entry-content>
 <p>Posts in this series:
-Introduction Part 1 - Set up DNS server (this one!) Part 2 - Set up Web server Part 3 - Secure with DANE Set up DNS server We’ll be using PowerDNS here. You can use bind9, knot, or any other authoritative server, but PowerDNS is the (personally) easiest to set up and use.
-Sebastian Rasor has a similar guide with nsd: https://www.sebastianrasor.com/blog/hosting-a-secure-website-on-the-handshake-protocol-using-dane...</p>
+Introduction Part 1 - Set up DNS server Part 2 - Set up Web server Part 3 - Secure with DANE (this one!) Secure with DANE If you’re following with the series, we have a website reachable with a Handshake domain, but it’s only over HTTP and not secure.
+With regular domains, one would request a Certificate Authority (CA) to sign our certificate and then use it on the web server....</p>
 </section>
-<footer class=entry-footer><span title="2021-11-26 00:00:05 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
-<a class=entry-link aria-label="post link to HNS + PowerDNS + Nginx + DANE - Part 1" href=https://blog.htools.work/posts/hns-pdns-nginx-part-1/></a>
+<footer class=entry-footer><span title="2021-11-26 00:00:00 +0530 +0530">November 26, 2021</span>&nbsp;·&nbsp;Rithvik Vibhu</footer>
+<a class=entry-link aria-label="post link to HNS + PowerDNS + Nginx + DANE - Part 3" href=https://blog.htools.work/posts/hns-pdns-nginx-part-3/></a>
 </article>
 </main>
 <footer class=footer>
