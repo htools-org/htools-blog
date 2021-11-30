@@ -2,7 +2,6 @@
 title: 'HNS + PowerDNS + Nginx + DANE - Introduction'
 date: 2021-11-26T00:00:00+05:30
 draft: false
-weight: 1
 ---
 
 **Posts in this series:**

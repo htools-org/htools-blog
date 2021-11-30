@@ -28,3 +28,9 @@ menu:
       name: Posts
       url: /posts/
       weight: 10
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
