@@ -26,9 +26,9 @@ with DNS basics).
 
 ### Domain Name
 
-Similar to how you'd ~~buy~~ rent a regular domain from a registrar like Namecheap or
-GoDaddy, get a domain on Handshake from https://namebase.io or with a custodial
-wallet like [Bob Wallet](https://bobwallet.io).
+Similar to how you'd ~~buy~~ rent a regular domain from a registrar like
+Namecheap or GoDaddy, get a domain on Handshake from https://namebase.io or with
+a non-custodial wallet like [Bob Wallet](https://bobwallet.io).
 
 ### DNS Server
 
