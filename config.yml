@@ -3,8 +3,6 @@ languageCode: en-us
 title: Handshake Tools Blog
 theme: PaperMod
 
-googleAnalytics: UA-214306612-1
-
 params:
   description: 'Guides, Articles, Posts on Handshake.'
   keywords: [Handshake, HTools]
