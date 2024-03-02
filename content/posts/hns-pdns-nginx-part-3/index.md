@@ -123,4 +123,4 @@ or to fix incorrect details, or for anything related to Handshake.
 
 You may also want to join Handshake groups on
 [Telegram](https://t.me/handshake_hns) and
-[Discord](https://discord.gg/AtqtxGckqX) to show off your shiny new website :D
+[Discord](https://handshake.org/discord) to show off your shiny new website :D
