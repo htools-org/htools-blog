@@ -1,6 +1,6 @@
 ---
 title: 'Stateless DANE websites with Caddy'
-date: 2024-03-02T00:00:00+05:30
+date: 2024-03-02T01:00:00+05:30
 draft: false
 description: Set up a Stateless DANE website in ~15 minutes with Caddy!
 ---
@@ -10,7 +10,7 @@ Stateless DANE. Caddy is the recommended way to set up such websites.
 
 Learn more about [Handshake](https://handshake.org/),
 [DANE](https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities),
-and [Stateless DANE](TODO).
+and [Stateless DANE]({{< ref "stateless-dane" >}}).
 
 ## Install Caddy
 
